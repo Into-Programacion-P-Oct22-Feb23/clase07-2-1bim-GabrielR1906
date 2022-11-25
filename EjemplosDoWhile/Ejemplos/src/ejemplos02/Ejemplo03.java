@@ -21,10 +21,13 @@ public class Ejemplo03 {
         double nota;
         boolean bandera = true;
         int salida;
+        double suma = 0;
         
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
+            
+            suma = suma + nota;
             
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
                     nota);
@@ -39,6 +42,7 @@ public class Ejemplo03 {
         } while (bandera); // (bandera==true)
         
         cadenaFinal = String.format("%s\n", cadenaFinal);
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        System.out.printf("Listado de Notas\n%s\nLa suma de las notas "
+                + "es: %.2f\n", cadenaFinal, suma);
     }
 }
